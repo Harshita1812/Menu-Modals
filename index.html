@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Webpage</title>
+</head>
+
+<body>
+    <h2>Select the city</h2>
+    <!-- DropDowns -->
+    <label for="city"></label>
+    <select id="city" name="city">
+        <option value="" disabled selected>Select a City</option>
+        <option value="indore">Indore</option>
+        <option value="bhopal">Bhopal</option>
+        <option value="ujjain">Ujjain</option>
+        <option value="mumbai">mumbai</option>
+        <option value="dewas">Dewas</option>
+        <option value="pune">Pune</option>
+        <option value="gwalior">Gwalior</option>
+        <option value="bangllore">Bangllore</option>
+        <option value="hydrabaad">Hydrabaad</option>
+    </select>
+</br></br>
+    <!-- Open modal button -->
+    <button onclick="openModal()">Select Now</button>
+    <div id="overlay" onclick="closemodal()"></div>
+
+    <!-- modal with form -->
+    <div id="myModal">
+        <h3>What do you think? about the city</h3>
+        <form onsubmit="submitForm(event)">
+            <label>Name:</label><br><br>
+            <input type="text" id="name" placeholder ="your name" required><br><br>
+
+            <label>address:</label><br><br>
+            <input type="text" id="address" placeholder="your address" required><br><br>
+
+            <label>Thoughts:</label><br><br>
+            <textarea rows="5" cols="10"id="Thoughts" placeholder = "your Thoughts..." Thoughts" required></textarea> <br><br>
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
